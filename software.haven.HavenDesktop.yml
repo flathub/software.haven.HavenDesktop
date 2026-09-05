@@ -44,7 +44,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/Haven-Organization/haven-desktop
-        tag: tag: haven-v0.8.3
+        tag: haven-v0.8.3
         commit: 47bb444787b7851e265c04fbf9329bbcc5b10f73
       - generated-sources.json
       - type: script
