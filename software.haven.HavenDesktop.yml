@@ -44,8 +44,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/Haven-Organization/haven-desktop
-        tag: haven-v0.8.0
-        commit: d253528399e9d238dc678021288bb595e54fcd77
+        tag: haven-v0.8.1
+        commit: 4b0a47bced4f865ef347f7ca5c71eaf2683e07a0
       - generated-sources.json
       - type: script
         dest: pnpm-cli/bin
