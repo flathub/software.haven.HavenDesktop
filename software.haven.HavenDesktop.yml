@@ -6,7 +6,9 @@ base: org.electronjs.Electron2.BaseApp
 base-version: '25.08'
 command: haven-desktop
 separate-locales: false
-sdk-extensions: [org.freedesktop.Sdk.Extension.node24]
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.node24
+  - org.freedesktop.Sdk.Extension.rust-stable
 
 finish-args:
   - --socket=fallback-x11
@@ -42,8 +44,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/Haven-Organization/haven-desktop
-        tag: haven-v0.7.5
-        commit: b4f1c23a62db3475fcf8b3cc134b34c5e23968a2
+        tag: haven-v0.8.0
+        commit: d253528399e9d238dc678021288bb595e54fcd77
       - generated-sources.json
       - type: script
         dest: pnpm-cli/bin
@@ -52,6 +54,24 @@ modules:
           - "#!/bin/sh"
           - exec node /run/build/haven-desktop/pnpm-cli/package/bin/pnpm.mjs "$@"
       - type: file
-        url: https://registry.npmjs.org/pnpm/-/pnpm-11.22.0.tgz
-        sha256: 57a97e6f23a3faffc03153a4ef8c770a0552612b8640aebe39bfdd5754d0ebdc
-        dest-filename: pnpm-11.22.0.tgz
+        url: https://registry.npmjs.org/pnpm/-/pnpm-11.23.0.tgz
+        sha256: 78dcbf44f40cef50d1f4b535ca9961a30edb4b13c420c360bf4068d424a41bc4
+        dest-filename: pnpm-11.23.0.tgz
+      - matrix-seshat-cargo-sources.json
+      - matrix-seshat-yarn-sources.json
+      - type: file
+        url: https://registry.npmjs.org/yarn/-/yarn-1.22.22.tgz
+        sha256: c17d3797fb9a9115bf375e31bfd30058cac6bc9c3b8807a3d8cb2094794b51ca
+        dest-filename: yarn-1.22.22.tgz
+      - type: archive
+        url: https://registry.npmjs.org/matrix-seshat/-/matrix-seshat-5.0.0.tgz
+        sha256: 3c18369a320098b17e2539226d0e96619c9be4693186f376ed11b077a27c95ca
+        dest: element-web/apps/desktop/.hak/matrix-seshat/x86_64-unknown-linux-gnu/build
+      - type: archive
+        url: https://registry.npmjs.org/matrix-seshat/-/matrix-seshat-5.0.0.tgz
+        sha256: 3c18369a320098b17e2539226d0e96619c9be4693186f376ed11b077a27c95ca
+        dest: element-web/apps/desktop/.hak/hakModules/matrix-seshat
+      - type: file
+        path: matrix-seshat-yarn.lock
+        dest: element-web/apps/desktop/.hak/matrix-seshat/x86_64-unknown-linux-gnu/build
+        dest-filename: yarn.lock
