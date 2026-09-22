@@ -44,8 +44,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/Haven-Organization/haven-desktop
-        tag: haven-v0.8.5
-        commit: 8b44496ad3eba2a04e7d8bdd6734c4bee8147565
+        tag: haven-v0.9.0
+        commit: 4b0db9e8e1fbe3e2f71ebf321b9e46846c082944
       - generated-sources.json
       - type: script
         dest: pnpm-cli/bin
@@ -58,20 +58,3 @@ modules:
         sha256: 78dcbf44f40cef50d1f4b535ca9961a30edb4b13c420c360bf4068d424a41bc4
         dest-filename: pnpm-11.23.0.tgz
       - matrix-seshat-cargo-sources.json
-      - matrix-seshat-yarn-sources.json
-      - type: file
-        url: https://registry.npmjs.org/yarn/-/yarn-1.22.22.tgz
-        sha256: c17d3797fb9a9115bf375e31bfd30058cac6bc9c3b8807a3d8cb2094794b51ca
-        dest-filename: yarn-1.22.22.tgz
-      - type: archive
-        url: https://registry.npmjs.org/matrix-seshat/-/matrix-seshat-5.0.0.tgz
-        sha256: 3c18369a320098b17e2539226d0e96619c9be4693186f376ed11b077a27c95ca
-        dest: element-web/apps/desktop/.hak/matrix-seshat/x86_64-unknown-linux-gnu/build
-      - type: archive
-        url: https://registry.npmjs.org/matrix-seshat/-/matrix-seshat-5.0.0.tgz
-        sha256: 3c18369a320098b17e2539226d0e96619c9be4693186f376ed11b077a27c95ca
-        dest: element-web/apps/desktop/.hak/hakModules/matrix-seshat
-      - type: file
-        path: matrix-seshat-yarn.lock
-        dest: element-web/apps/desktop/.hak/matrix-seshat/x86_64-unknown-linux-gnu/build
-        dest-filename: yarn.lock
