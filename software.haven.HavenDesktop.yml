@@ -44,8 +44,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/Haven-Organization/haven-desktop
-        tag: haven-v0.10.0
-        commit: 52fcec4d64a1654d5c060fd17f207728270ed024
+        tag: haven-v0.11.0
+        commit: d95c2468a06fbc256e0ca38122da7175af0cf351
       - generated-sources.json
       - element-call-sources.json
       - matrix-seshat-cargo-sources.json
@@ -56,16 +56,20 @@ modules:
           - "#!/bin/sh"
           - exec /run/build/haven-desktop/pnpm-cli/package/pnpm "$@"
       - type: file
-        url: https://registry.npmjs.org/pnpm/-/pnpm-12.11.2.tgz
-        sha256: eb57341b8b54fddaeededb15dbb77cc30a11750cecca301bfda02478fdff3a00
-        dest-filename: pnpm-12.11.2.tgz
+        url: https://registry.npmjs.org/pnpm/-/pnpm-12.14.0.tgz
+        sha256: ea206e35474bf87be9564a85ca70ed1c8ebdc45da55aafb0a3bf09d1ba69b179
+        dest-filename: pnpm-12.14.0.tgz
       - type: file
         only-arches: [x86_64]
-        url: https://registry.npmjs.org/@pnpm/exe.linux-x64/-/exe.linux-x64-12.11.2.tgz
-        sha256: 79008d3130845ee8a0fe4381e6b81815e80e1bd411702f34721b1cc63e6e20bf
-        dest-filename: pnpm-exe-12.11.2.tgz
+        url: https://registry.npmjs.org/@pnpm/exe.linux-x64/-/exe.linux-x64-12.14.0.tgz
+        sha256: 1de98ed2e9621113b0887b06322b461efb9df73d913fc1d151039b10b7117a41
+        dest-filename: pnpm-exe-12.14.0.tgz
       - type: file
         only-arches: [aarch64]
-        url: https://registry.npmjs.org/@pnpm/exe.linux-arm64/-/exe.linux-arm64-12.11.2.tgz
-        sha256: c9b5d1a2a254f4593a6fbd878bbbbc81dce4fb36b1c850cc8f31031dbb08ffdb
-        dest-filename: pnpm-exe-12.11.2.tgz
+        url: https://registry.npmjs.org/@pnpm/exe.linux-arm64/-/exe.linux-arm64-12.14.0.tgz
+        sha256: e7ca24224eb626a032828ec584c67903ad2f389911b849d009ed70a19f70d8d3
+        dest-filename: pnpm-exe-12.14.0.tgz
+      - type: file
+        url: https://registry.npmjs.org/@ruffle-rs/ruffle/-/ruffle-0.7.1.tgz
+        sha256: dc9e7407549a91accc41a14932b0b9d9a9d51a3742ce6f020888c8a76682b157
+        dest-filename: ruffle-0.7.1.tgz
